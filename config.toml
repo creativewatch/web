@@ -1,0 +1,64 @@
+baseURL = 'https://creative.watch/'
+languageCode = 'en-us'
+title = 'Creative Watch'
+theme = "archie"
+copyright = "© 2025"
+
+[pagination]
+pagerSize = 10
+
+[markup]
+[markup.highlight]
+noClasses = false
+style = "monokai"
+codeFences = true
+guessSyntax = true
+
+[frontmatter]
+date = [':filename', ':default']
+section = ['categories']
+
+[permalinks]
+posts = '/:section/:year/:month/:day/:slugorcontentbasename/'
+
+[params]
+mode = "auto"
+useCDN = false
+subtitle = "[...] subtitle"
+mathjax = true
+katex = true
+
+[[params.social]]
+name = "Bluesky"
+icon = "cloud"
+url = "https://bsky.app/profile/user"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/user"
+
+[[params.social]]
+name = "Linkedin"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/user/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "static/assets"
